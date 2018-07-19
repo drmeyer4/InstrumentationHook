@@ -20,3 +20,5 @@ Finally, you will have to add the <code>-javaagent</code> flag when you run the 
 <code>-javaagent:/path/to/this/lib/InstrumentationLib.jar</code>
 
 If you are using and IDE, you will, in all liklihood, also have to reference the library from inside the IDE.
+
+I did not write this code. Credit goes to finnw, https://stackoverflow.com/users/12048/finnw
