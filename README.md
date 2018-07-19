@@ -1,2 +1,22 @@
 # InstrumentationHook
-Jar for getting the Instrumentation object during runtime on the JVM
+This repo creates a jar for getting the Instrumentation object out of the JVM at runtime.
+
+I found out about the Instrumentation object from a StackOverflow post:
+
+https://stackoverflow.com/questions/2681459/how-can-i-list-all-classes-loaded-in-a-specific-class-loader
+
+INSTRUCTIONS:
+
+After cloning, compile the class
+
+<code>javac local/instruments/InstrumentationHook.java</code>
+
+Then build the jar with the manifest
+
+<code>jar cvmf manifest.txt InstrumentationLib.jar local/instruments/InstrumentationHook.class</code>
+
+Finally, you will have to add the <code>-javaagent</code> flag when you run the project, specifying this library:
+
+<code>-javaagent:/path/to/this/lib/InstrumentationLib.jar</code>
+
+If you are using and IDE, you will, in all liklihood, also have to reference the library from inside the IDE.
