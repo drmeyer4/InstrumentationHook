@@ -16,8 +16,6 @@ public class InstrumentationHook {
         return (Instrumentation) System.getProperties().get(INSTRUMENTATION_KEY);
     }
 
-    // Needn't be a UUID - can be a String or any other object that
-    // implements equals().    
     private static final Object AGENT_ARGS_KEY =
         UUID.fromString("887b43f3-c742-4b87-978d-70d2db74e40e");
 
