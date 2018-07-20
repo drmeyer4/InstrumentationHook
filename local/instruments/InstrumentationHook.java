@@ -3,6 +3,13 @@ package local.instruments;
 import java.lang.instrument.Instrumentation;
 import java.util.UUID;
 
+/*
+ * Code taken from
+ *
+ * https://stackoverflow.com/questions/2681459/how-can-i-list-all-classes-loaded-in-a-specific-class-loader
+ *
+ * Credit goes to finnw, https://stackoverflow.com/users/12048/finnw
+ */
 public class InstrumentationHook {
 
     public static void premain(String agentArgs, Instrumentation inst) {
